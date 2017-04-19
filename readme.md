@@ -3,14 +3,6 @@
 
 `bundle install`
 
-create db (sqlite3 console):
-
-```
-CREATE TABLE games (
-  name string,
-  genre string );
-```
-
 To add a new one:
 
 `curl -i -X POST -H "Content-Type: application/json" -d '{"name":"GameName", "genre":"GameGenre"}' http://localhost:4567/api/v1/game`
