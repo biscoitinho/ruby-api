@@ -9,5 +9,6 @@ gem 'sqlite3', '~> 1.3.12'
 
 group :testing do
   gem 'rspec', '~> 3.5.0'
-  gem 'rack-test', '~>0.6.3'
+  gem 'rack-test', '~> 0.6.3'
+  gem 'database_cleaner', '~> 1.5.3'
 end
