@@ -39,5 +39,33 @@ RSpec.describe 'games API' do
       expect(last_response.status).to eq 201
       expect(Game.last.name).to eq "tetris"
     end
+
+    it "edits a game" do
+      game_params = {
+          "name" => "chess",
+          "genre" => "logical"
+      }.to_json
+
+      request_headers = {
+        "Accept" => "application/json",
+        "Content-Type" => "application/json"
+      }
+
+      patch "/api/v1/games/1", game_params, request_headers
+
+      expect(last_response.status).to eq 200
+      expect(Game.last.name).to eq "chess"
+    end
+
+    it "deletes a game" do
+      request_headers = {
+        "Accept" => "application/json",
+        "Content-Type" => "application/json"
+      }
+
+      delete "/api/v1/games/1", request_headers
+
+      expect(last_response.status).to eq 204
+    end
   end
 end

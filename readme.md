@@ -9,7 +9,7 @@ To add a new one:
 
 To update one:
 
-`curl -i -X PATCH -H "Content-Type: application/json" -d '{"title":"Foundation, Asimov"}' http://localhost:4567/api/v1/games/IdGame`
+`curl -i -X PATCH -H "Content-Type: application/json" -d '{"name":"GameName", "genre":"GameGenre"}' http://localhost:4567/api/v1/games/IdGame`
 
 To delete one:
 
